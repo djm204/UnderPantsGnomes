@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 
+  status: 
+  taxes: 
+  line_item_id_id: 
+
+two:
+  customer_id: 
+  status: 
+  taxes: 
+  line_item_id_id: 

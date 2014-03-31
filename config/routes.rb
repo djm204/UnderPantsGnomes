@@ -1,4 +1,16 @@
 UnderPantsGnomes::Application.routes.draw do
+  resources :orders
+
+  resources :customers
+
+  resources :provinces
+
+  resources :line_items
+
+  resources :categories
+
+  resources :products
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

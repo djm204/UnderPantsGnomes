@@ -45,4 +45,3 @@ end
 # gem 'debugger', group: [:development, :test]
 
 #ActiveAdmin
-gem 'activeadmin', github: 'gregbell/active_admin'
