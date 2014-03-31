@@ -6,7 +6,7 @@ class CreateCustomers < ActiveRecord::Migration
       t.string :shipping_address, null: false
       t.string :city, null: false
       t.string :postal_code, null: false
-      t.references :province_id, null: false
+      t.references :province, null: false
       t.decimal :credit_limit
       t.string :email_address, null: false
 
