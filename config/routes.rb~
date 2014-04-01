@@ -1,8 +1,6 @@
 UnderPantsGnomes::Application.routes.draw do
-  resources :contact_us
 
-  resources :about_us
-
+  get 'about_us/index' => 'about_us#index'
   get "home/index"
   get "home/show"
   get "home/update"

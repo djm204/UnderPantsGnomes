@@ -1,6 +1,6 @@
 UnderPantsGnomes::Application.routes.draw do
 
-
+  get 'about_us' => 'about_us#index'
   get "home/index"
   get "home/show"
   get "home/update"
