@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %title The Underpants Gnomes Used Underpants Emporium!
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    %header
+      %nav
+        %ul
+          %li
+            %a= link_to "Home", "/"
+          %li
+            %a= link_to "Products", "/products"
+          %li
+            %a= link_to "About Us", "/abouts"
+          %li
+            %a= link_to "Contact Us", "/contacts"
+          
+
+    = yield
+    

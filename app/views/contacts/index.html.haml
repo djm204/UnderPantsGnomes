@@ -1,7 +1,7 @@
-%h1 Contact Us
+%h1#title Contact Us
 
 %section#main_content
   - @contacts.each do |contact|
     %h1= contact.title
-    %h3= contact.content
+    %h3= link_to contact.content, "mailto:#{contact.content}"
 
