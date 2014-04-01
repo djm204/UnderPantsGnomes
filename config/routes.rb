@@ -1,4 +1,6 @@
 UnderPantsGnomes::Application.routes.draw do
+
+
   get "home/index"
   get "home/show"
   get "home/update"

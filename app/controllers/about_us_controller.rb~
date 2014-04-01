@@ -1,0 +1,4 @@
+class AboutUsController < InheritedResources::Base
+  def index
+  end
+end
