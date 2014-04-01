@@ -1,0 +1,9 @@
+
+  %section#mainbody
+    - @abouts.each do |about|
+      %tr
+        %h1= about.title
+        %p= about.content
+        
+%br/
+

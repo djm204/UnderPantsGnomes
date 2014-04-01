@@ -1,0 +1,7 @@
+%h1 Contact Us
+
+%section#main_content
+  - @contacts.each do |contact|
+    %h1= contact.title
+    %h3= contact.content
+
