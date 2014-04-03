@@ -48,3 +48,5 @@ end
 gem 'activeadmin', github: 'gregbell/active_admin'
 
 gem 'haml'
+
+gem 'paperclip', '3.5.3'
