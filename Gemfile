@@ -49,4 +49,6 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 
 gem 'haml'
 
-gem 'paperclip', '3.5.3'
+#gem 'paperclip', '3.5.3'
+
+gem 'carrierwave', '~> 0.10.0'
