@@ -30,8 +30,8 @@ Category.create(name: 'Religious',  description: 'All kinds of religious under g
 
 
 ### Create default Products
-Product.create(name: 'Tighty Whiteys',  description: 'Standard briefs', price: 2.00, image_name: 'tighties.jpg', stock_quantity: 10, category_id: 1)
-Product.create(name: 'Black Boxers',  description: 'Black Boxer Shorts', price: 3.00, image_name: 'black_boxers.jpg', stock_quantity: 10, category_id: 2)
+Product.create(name: 'Tighty Whiteys',  description: 'Standard briefs', price: 2.00, image: 'tighties.jpg', stock_quantity: 10, category_id: 1)
+Product.create(name: 'Black Boxers',  description: 'Black Boxer Shorts', price: 3.00, image: 'black_boxers.jpg', stock_quantity: 10, category_id: 2)
 
 
 
