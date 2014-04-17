@@ -4,7 +4,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :name, null: false
       t.text :description, null: false
       t.decimal :price, null: false, precision: 5, scale: 2
-      t.string :image_name, null: false
+      t.string :image, null: false
       t.integer :stock_quantity, null: false
       t.references :category, index: true
 

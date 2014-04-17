@@ -51,4 +51,4 @@ gem 'haml'
 
 #gem 'paperclip', '3.5.3'
 
-gem 'carrierwave', '~> 0.10.0'
+gem 'carrierwave'

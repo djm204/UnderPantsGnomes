@@ -120,7 +120,7 @@ ActiveRecord::Schema.define(version: 20140402161808) do
     t.string   "name",                                   null: false
     t.text     "description",                            null: false
     t.decimal  "price",          precision: 5, scale: 2, null: false
-    t.string   "image_name",                             null: false
+    t.string   "image",                                  null: false
     t.integer  "stock_quantity",                         null: false
     t.integer  "category_id"
     t.datetime "created_at"
