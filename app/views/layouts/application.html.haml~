@@ -18,10 +18,7 @@
             %a= link_to "About Us", "/abouts"
           %li
             %a= link_to "Contact Us", "/contacts"
-            
-    %body
-      %section this is where the content will go
-    
+          
 
-  
+    = yield
     
