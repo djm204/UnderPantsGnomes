@@ -5,6 +5,7 @@ class CreateProducts < ActiveRecord::Migration
       t.text :description, null: false
       t.decimal :price, null: false, precision: 5, scale: 2
       t.string :image
+      t.string :status
       t.integer :stock_quantity, null: false
       t.references :category, index: true
 

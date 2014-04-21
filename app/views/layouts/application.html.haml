@@ -6,35 +6,41 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-    %header
-      %nav
-        %ul
-          %li
-            %a= link_to "Home", "/"
-            
-          %li
-            %a= link_to "Products", "/products"
-          %li
-            %a= link_to "About Us", "/abouts"
-          %li
-            %a= link_to "Contact Us", "/contacts"
-            
-    %section this is where the content will go
-    %footer
-      This is where the footer nav and copyright info will go
-      %nav
-        %ul
-          %li
-            %a= link_to "Home", "/"
-            
-          %li
-            %a= link_to "Products", "/products"
-          %li
-            %a= link_to "About Us", "/abouts"
-          %li
-            %a= link_to "Contact Us", "/contacts"
+    %section{:id => "container"}
+      %header
       
-      
+        %nav
+          %ul
+            %li
+              %a= link_to "Home", "/"
+              
+            %li
+              %a= link_to "Products", "/products"
+            %li
+              %a= link_to "About Us", "/abouts"
+            %li
+              %a= link_to "Contact Us", "/contacts"
+              
+      %section{:id => "maincontent"}
+        %section{:id => "sidebar_nav"}= render :partial => "categories/sidebarnav"
+          
+        %section{:id => "content"}= yield
+        %section{:id => "special_deals"}
+      %footer
+        This is where the footer nav and copyright info will go
+        %nav
+          %ul
+            %li
+              %a= link_to "Home", "/"
+              
+            %li
+              %a= link_to "Products", "/products"
+            %li
+              %a= link_to "About Us", "/abouts"
+            %li
+              %a= link_to "Contact Us", "/contacts"
+        
+        
     
 
   

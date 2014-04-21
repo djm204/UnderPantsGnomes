@@ -1,0 +1,23 @@
+%h1 Listing products
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Price
+      %th Image name
+      %th Stock quantity
+      %th Category
+      %th
+      %th
+      %th
+  %tbody
+    - @products.each do |product|
+      %section
+        %p= product.name
+        %p= product.description
+        %p.category= link_to "#{product.category.name}", product.category
+        %p= product.price
+        %p= product.stock_quantity
+        
+        %p.image= link_to image_tag(product.image), product
