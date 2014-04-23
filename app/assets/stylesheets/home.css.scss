@@ -29,7 +29,13 @@ header
     {
         #search
         {
+            margin-top: 10px;
             float:right;
+            width: 250px;
+            #search_keywords
+            {
+                width: 100px;
+            }
         }
         background: black;
         ul

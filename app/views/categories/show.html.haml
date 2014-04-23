@@ -9,13 +9,9 @@
 -@category.products.each do |product|
   %section.item
     %p= link_to product.name, "products/#{product.id}"
-    %p= product.description
-    %p.category
-      =link_to "#{product.category.name}", product.category
-  
+    %p= product.description  
     %p= "Price: #{number_to_currency(product.price)}"
-    %p= "In Stock: #{product.stock_quantity}"
-    
+    %p= "In Stock: #{product.stock_quantity}"    
     %p.image= link_to image_tag(product.image), product
     
 |

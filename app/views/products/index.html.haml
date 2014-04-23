@@ -1,15 +1,3 @@
 %h1 Listing products
 
-- @products.each do |product|
-  %span.item
-    %p= link_to product.name, "products/#{product.id}"
-    %p= product.description
-    %p.category
-      -if product.category.present?
-        =link_to "#{product.category.name}", product.category
-      -else
-        = "None."
-    %p= "Price: #{number_to_currency(product.price)}"
-    %p= "In Stock: #{product.stock_quantity}"
-    
-    %p.image= link_to image_tag(product.image), product
+%section= render partial: "product", collection: @products

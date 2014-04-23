@@ -23,7 +23,10 @@
             %li
               = link_to "Contact Us", contacts_path
             %li{:id => "search"}
-              = link_to "Search", search_path
+              = form_tag search_results_path, method: 'get' do
+                = submit_tag "Search"
+                = text_field_tag :search_keywords
+                
         %section.clearfix       
       %section{:id => "maincontent"}
         %section{:id => "sidebar_nav"}= render :partial => "categories/sidebarnav"

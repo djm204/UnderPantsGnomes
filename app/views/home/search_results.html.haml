@@ -1,1 +1,6 @@
-%p search results:
+%h2= "Search Results for '#{params[:search_keywords]}'"
+-if @found_products.empty?
+  %p.field_with_errors No Results Found.
+-else
+  = debug params
+  = render partial: 'products/product', collection: @found_products
