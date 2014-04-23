@@ -1,6 +1,6 @@
 %section.item
   %p= link_to product.name, product
-  %p{:id => "description"}= product.description
+  %p.description= product.description
   %p.category
     -if product.category.present?
       =link_to "#{product.category.name}", product.category
