@@ -5,4 +5,10 @@ class Product < ActiveRecord::Base
   validates_presence_of :name, :description, :price, :stock_quantity
   validates_uniqueness_of :name
 
+
+  def self.keyword_search(keywords)
+    keywords = "%" +  keywords + "%"
+    Product.where("name LIKE ? OR description LIKE ?",
+                                    keywords, keywords)    
+  end
 end

@@ -7,9 +7,8 @@ class HomeController < ApplicationController
   end
 
   def search_results  #displays search results
-    keywords = "%" +  params[:search_keywords] + "%"
-    @found_products = Product.where("name LIKE ? OR description LIKE ?",
-                                    keywords, keywords)
+   
+    @found_products = Product.keyword_search(params[:search_keywords])
   end
   
   private
