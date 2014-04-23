@@ -9,14 +9,3 @@
         height: 150px;
     }
 }
-
-.item
-{
-    border: 1px dashed black;
-    display: inline-block;
-    padding: 10px;
-    p
-    {
-        margin: 0px;
-    }
-}

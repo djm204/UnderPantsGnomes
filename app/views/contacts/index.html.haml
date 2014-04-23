@@ -1,7 +1,5 @@
-%h1#title Contact Us
-
 %section#main_content
   - @contacts.each do |contact|
     %h1= contact.title
-    %h3= link_to contact.content, "mailto:#{contact.content}"
-
+    %p= image_tag("gnomes_plan.png")
+    %h4= contact.content

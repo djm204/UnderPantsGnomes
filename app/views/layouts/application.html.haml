@@ -8,38 +8,40 @@
   %body
     %section{:id => "container"}
       %header
-      
+        #logo
+          = link_to image_tag("logo.png"), "/"
+        %h1{:id => "header_line"}= link_to "Underpants Gnome's ", "/"
+        %h1{:id => "header_line2"}= link_to "Used Underpants Emporium", "/"
         %nav
           %ul
             %li
-              %a= link_to "Home", "/"
-              
+              = link_to "Home", "/" 
             %li
-              %a= link_to "Products", "/products"
+              = link_to "Products", "/products"
             %li
-              %a= link_to "About Us", "/abouts"
+              = link_to "About Us", "/abouts"
             %li
-              %a= link_to "Contact Us", "/contacts"
-              
+              = link_to "Contact Us", "/contacts"
+        %section.clearfix       
       %section{:id => "maincontent"}
         %section{:id => "sidebar_nav"}= render :partial => "categories/sidebarnav"
           
+          
         %section{:id => "content"}= yield
-        %section{:id => "special_deals"}
+        %section.clearfix
       %footer
-        This is where the footer nav and copyright info will go
         %nav
           %ul
             %li
-              %a= link_to "Home", "/"
-              
+              = link_to "Home", "/"
             %li
-              %a= link_to "Products", "/products"
+              = link_to "Products", "/products"
             %li
-              %a= link_to "About Us", "/abouts"
+              = link_to "About Us", "/abouts"
             %li
-              %a= link_to "Contact Us", "/contacts"
-        
+              = link_to "Contact Us", "/contacts"
+        %h5 &copy;opyWrong Underpants Gnome's Used Underpants Emporium
+        %section.clearfix
         
     
 

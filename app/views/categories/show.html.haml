@@ -1,14 +1,22 @@
-<p id="notice"><%= notice %></p>
+%p#notice= notice
+%p
+  %strong Name:
+  = @category.name
+%p
+  %strong Description:
+  = @category.description
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @category.description %>
-</p>
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+-@category.products.each do |product|
+  %section.item
+    %p= link_to product.name, "products/#{product.id}"
+    %p= product.description
+    %p.category
+      =link_to "#{product.category.name}", product.category
+  
+    %p= "Price: #{number_to_currency(product.price)}"
+    %p= "In Stock: #{product.stock_quantity}"
+    
+    %p.image= link_to image_tag(product.image), product
+    
+|
+\#{link_to 'Back', categories_path}

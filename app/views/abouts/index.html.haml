@@ -1,6 +1,5 @@
-%h1#title About Us
-
 %section#main_content
   - @abouts.each do |about|
     %h1= about.title
+    %p= image_tag("gnomes_plan.png")
     %h3= about.content

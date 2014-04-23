@@ -46,4 +46,14 @@ class OrdersControllerTest < ActionController::TestCase
 
     assert_redirected_to orders_path
   end
+  
+  def test_adding
+  assert_difference(CartItem, :count) do 
+    post :add, :id => 4
+  end
+
+  assert_response :redirect 
+  assert_redirected_to :controller => "catalog"
+  assert_equal 1, Order.find(@request.session[:order_id]).line_items.size
+  end
 end
