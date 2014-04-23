@@ -22,6 +22,9 @@ UnderPantsGnomes::Application.routes.draw do
   resources :categories
 
   resources :products
+  
+  get 'search' => 'home#search', as: 'search'
+  get 'search_results' => 'home#search_results', as: 'search_results'
   #get "/products", to: "products#index", as: "products"
 
   # The priority is based upon order of creation: first created -> highest priority.

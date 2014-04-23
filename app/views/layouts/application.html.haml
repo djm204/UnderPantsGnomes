@@ -15,13 +15,15 @@
         %nav
           %ul
             %li
-              = link_to "Home", "/" 
+              = link_to "Home", root_path 
             %li
-              = link_to "Products", "/products"
+              = link_to "Products", products_path
             %li
-              = link_to "About Us", "/abouts"
+              = link_to "About Us", abouts_path
             %li
-              = link_to "Contact Us", "/contacts"
+              = link_to "Contact Us", contacts_path
+            %li{:id => "search"}
+              = link_to "Search", search_path
         %section.clearfix       
       %section{:id => "maincontent"}
         %section{:id => "sidebar_nav"}= render :partial => "categories/sidebarnav"

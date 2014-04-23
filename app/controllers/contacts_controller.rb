@@ -1,5 +1,5 @@
 class ContactsController < InheritedResources::Base
-
+  before_action :set_categories
   def create
     @about = About.new(about_params)
 
@@ -16,10 +16,7 @@ class ContactsController < InheritedResources::Base
 
   
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_customer
-      @about = Abouts.find(params[:id])
-    end
+    
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def about_params
