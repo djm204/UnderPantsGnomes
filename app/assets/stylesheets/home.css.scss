@@ -1,6 +1,7 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$primary_site_color: #005c9b;
 *
 {
     margin: 0px;
@@ -31,13 +32,25 @@ header
         {
             margin-top: 10px;
             float:right;
-            width: 250px;
+            width: 450px;
+            input
+            {
+                float:right;
+                margin-right:10 px;
+            }
+            
+            select
+            {
+                float: right;
+                margin-right: 10px;
+            }
             #search_keywords
             {
-                width: 100px;
+                width: 150px;
+                
             }
         }
-        background: black;
+        background: $primary_site_color;
         ul
         {
            
@@ -53,7 +66,7 @@ header
                     display:inline-block;
                     font-size: 13pt;
                     font-weight: bold;
-                    border: 1px solid black;
+                    border: 1px solid $primary_site_color;
 
                 }
                 a:link, a:visited
@@ -64,7 +77,7 @@ header
                 a:hover, a:active
                 {
                     background: white;
-                    color: black;
+                    color: $primary_site_color;
                     box-sizing: border-box;
                 }
                 
@@ -76,6 +89,8 @@ header
         font-size: 1.5em;
         margin-right: 470px;
         float:right;
+        text-shadow: 1px 1px 1px black;
+
         a:link
         {
             text-decoration: none;
@@ -152,7 +167,7 @@ header
 footer
 {
     padding-top: 10px;
-    background: #000;
+    background: $primary_site_color;
     nav
     {
         width: 40%;        
@@ -186,7 +201,6 @@ footer
         text-align: center;
         color: #fff;
         font-size: .5em;
-        background: #000;
         display: inline-block;
         margin-right: 10px;
         float: right;

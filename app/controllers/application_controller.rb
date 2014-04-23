@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
     # Use callbacks to share common setup or constraints between actions.
     def set_categories
       @categories = Category.order(:name)
+      
     end
 
 end

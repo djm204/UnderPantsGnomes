@@ -15,8 +15,14 @@
     border: 1px dashed black;
     display: inline-block;
     padding: 10px;
+    margin-bottom: 5px;
+    #description
+    {
+        height: 48px;
+    }
     p
     {
         margin: 0px;
+        width: 200px;
     }
 }
