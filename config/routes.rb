@@ -3,17 +3,17 @@ UnderPantsGnomes::Application.routes.draw do
   resources :contacts
 
   resources :abouts
+  
+  post 'cart/cart', to: 'cart#index', as: 'cart'
+  get  'cart/cart', to: 'cart#logout', as: 'cart_logout'
 
 
   get "home/index"
-  get "home/show"
-  get "home/update"
-  get "home/edit"
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :orders
 
-  resources :customers
+  resources :customers   
 
   resources :provinces
 
@@ -21,7 +21,12 @@ UnderPantsGnomes::Application.routes.draw do
 
   resources :categories
 
-  resources :products
+  resources :products 
+ 
+   
+    
+
+  
   
   get 'search' => 'home#search', as: 'search'
   get 'search_results' => 'home#search_results', as: 'search_results'

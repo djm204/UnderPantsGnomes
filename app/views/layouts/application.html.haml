@@ -26,7 +26,8 @@
               = form_tag search_results_path, method: 'get' do
                 = text_field_tag :search_keywords
                 = submit_tag "Search"
-                = select_tag :option, options_from_collection_for_select(@categories, "id", "name"), :prompt => "All Products"
+                = select_tag :option, options_from_collection_for_select(@categories, "id", "name"),
+                              :prompt => "All Products"
                 
         %section.clearfix       
       %section{:id => "maincontent"}
