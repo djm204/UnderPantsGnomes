@@ -4,8 +4,11 @@ UnderPantsGnomes::Application.routes.draw do
 
   resources :abouts
   
-  post 'cart/cart', to: 'cart#index', as: 'cart'
-  get  'cart/cart', to: 'cart#logout', as: 'cart_logout'
+  post 'cart/cart', to: 'cart#cart', as: 'cart'
+  get  'cart/cart', to: 'cart#index', as: 'cart_index'
+  get  'cart/remove', to: 'cart#remove_from_cart', as: 'remove_item'
+  post  'cart/remove', to: 'cart#remove_from_cart', as: 'remove_item1'
+  get  'cart/logout', to: 'cart#logout', as: 'cart_logout'
 
 
   get "home/index"

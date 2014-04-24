@@ -1,0 +1,8 @@
+= debug session
+= pluralize @visit_count, 'time'
+= link_to "logout", cart_path
+%section
+    -@cart_items.each do |item|
+      %p= @cart_items.product_id
+      %p= @cart_tems.qty
+    end

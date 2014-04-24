@@ -1,3 +1,18 @@
-= debug params
-= pluralize @visit_count, 'time'
-= link_to "logout", cart_path
+%h1 Your Cart
+-@ordered.each_with_index do |order_item, index|
+
+  %section.item
+    
+    %p.image= link_to image_tag(order_item.image), order_item
+    %p= link_to order_item.name, order_item
+    %p.description= order_item.description
+    %p= "Price: #{number_to_currency(order_item.price)}"
+    %p= "Qty: #{@qtys[index]}"
+    %section{id: "remove_from_cart"}
+      =form_tag remove_item_path method: 'post' do
+        %input{type: "hidden", name: "product_remove_id", value: order_item.id}
+        =submit_tag "Remove"
+  
+
+ 
+
